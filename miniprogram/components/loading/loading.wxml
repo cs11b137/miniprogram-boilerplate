@@ -1,0 +1,14 @@
+<!--components/loading/loading.wxml-->
+<view class="loading">
+  <view class="spinner">
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+  <text>加载中...</text>
+</view>

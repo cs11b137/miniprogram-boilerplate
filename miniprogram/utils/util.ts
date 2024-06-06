@@ -17,3 +17,18 @@ const formatNumber = (n: number) => {
   const s = n.toString()
   return s[1] ? s : '0' + s
 }
+
+// 发送请求
+const request = (options: WechatMiniprogram.RequestOption<string | Record<string, any> | ArrayBuffer>) => {
+    return new Promise((resolve, reject) => {
+      wx.request({
+        ...options,
+        success: (res) => {
+          resolve(res.data)
+        },
+        fail: (err) => {
+          reject(err)
+        }
+      })
+    })
+  }
